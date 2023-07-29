@@ -1,0 +1,417 @@
+/* Name: Shashin Gounden */
+/* Student Number: 21458686 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #161616;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 22px;
+}
+
+
+
+.logo {
+  cursor: pointer;
+  width: 250px;
+  margin-left: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px 55px;
+}
+
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+nav ul li a:hover 
+{
+  transition: 0.3s;
+}
+
+nav ul li a::after 
+{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  left: 0;
+  bottom: -10%;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after 
+{
+  width: 100%;
+}
+
+nav ul li a.active-page {
+  border-bottom: 3px solid white;
+  padding-bottom: 3px;
+}
+
+.search_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 275px;
+}
+
+.search_bar input {
+  width: 50%;
+  height: 35px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  border-radius: 25px;
+  border: 0;
+  outline: none;
+  border-color: black;
+}
+
+.search_bar button {
+  background: transparent;
+  border: none;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.select-menu
+{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+select
+{
+  width: 100%;
+  height: 30px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: gray;
+  text-align: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+
+.sort_by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sort_by p {
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.sort_by input {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.sort_by label {
+  color: white;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  font-family: "Raleway", sans-serif;
+  margin-left: 1%;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.stats div {
+  display: inline-block;
+  padding: 2% 2% 0% 2%;
+}
+
+.stats h1,
+h5 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car 
+{
+  padding: 4em 1em 4em 1em;
+  margin-top: 8em;
+}
+
+.circle {
+  border: 2px white solid;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background: #161616;
+  animation: glow 4s ease-in-out infinite;
+  aspect-ratio: 3/1;
+}
+
+.car_img {
+  width: 70%;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.circle div {
+  border: inherit;
+  border-radius: inherit;
+  background: inherit;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: inherit;
+}
+
+.circle .inner-md-circle {
+  width: 75%;
+  height: 75%;
+  top: 10%;
+  animation-delay: 3s;
+}
+
+.circle .inner-sm-circle {
+  width: 50%;
+  height: 50%;
+  top: 20%;
+  animation-delay: 6s;
+}
+
+.car_container {
+  border-bottom: white solid;
+  border-bottom-style: dashed;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: white solid;
+  border-radius: 0.5em;
+  margin-bottom: 5%;
+  animation: glow 4s ease-in-out infinite;
+}
+
+.car_container h1,
+h5 {
+  font-family: "Raleway", sans-serif;
+  }
+
+@keyframes glow {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 2em white;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.car_container h1,
+h5 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+  animation: typing 0.8s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  border-top: 2px solid white;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.footer-content {
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 33.33%;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-column li {
+  margin-bottom: 5px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column .footer-logo {
+  text-align: center;
+}
+
+.footer-column p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.error-container 
+{
+  max-width: 500px;
+  margin: 100px;
+  margin-left: 500px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.error-container h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.error-container p 
+{
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.toggle-switch {
+  appearance: button;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 16px;
+  height: 30px;
+  width: 150px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
+
+#saveFilters{
+  appearance: button;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 16px;
+  height: 30px;
+  width: 300px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  left: 68%;
+  margin-top: 1%;
+}
+
+.rating
+{
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 30px 40px;
+  background: #161616;
+  justify-content: center;
+
+}
+
+.rating input{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+}
+
+.rating input::before
+{
+content: '\f005';
+font-family: fontAwesome;
+font-size: 25px;
+position: absolute;
+color: white;
+transition: 0.5s;
+}
+
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before
+{
+  color: orange;
+}
+
+
+
+
+
+
+
+
+
