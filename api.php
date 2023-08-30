@@ -171,7 +171,7 @@ class CarAPI
                 $this->sendResponse(array('status' => 'success', 'timestamp' => time(), 'data' => $result));
                 break;
             case "rate":
-                    $connec = mysqli_connect('wheatley.cs.up.ac.za','u21458686','QNNG44DSL5VSLF5STO77LABLDZJHNHZK','u21458686');
+                    $connec = mysqli_connect('wheatley.cs.up.ac.za','','','');
                     $postData = json_decode(file_get_contents("php://input"), true);
                     $id_trim = $postData['id_trim'];
                     $apikey = $postData["apikey"];
@@ -200,7 +200,7 @@ class CarAPI
                     }
                 break;
             case "update":
-                    $connec = mysqli_connect('wheatley.cs.up.ac.za','u21458686','QNNG44DSL5VSLF5STO77LABLDZJHNHZK','u21458686');
+                    $connec = mysqli_connect('wheatley.cs.up.ac.za','','','');
                     $postData = json_decode(file_get_contents("php://input"), true);
                     $apikey = $postData["apikey"];
                     $preferences = $postData['preferences'];
