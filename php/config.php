@@ -6,9 +6,9 @@ class Database
     public static function instance()
     {
         $serverName = "wheatley.cs.up.ac.za";
-        $userName = "u21458686";
-        $password = "QNNG44DSL5VSLF5STO77LABLDZJHNHZK";
-        $database = "u21458686";
+        $userName = "";
+        $password = "";
+        $database = "";
 
         static $instance = null;
 
@@ -22,7 +22,7 @@ class Database
 
     private function __construct($serverName,$userName,$password,$database)
     {
-        $this->conn=mysqli_connect('wheatley.cs.up.ac.za','u21458686','QNNG44DSL5VSLF5STO77LABLDZJHNHZK','u21458686');
+        $this->conn=mysqli_connect('wheatley.cs.up.ac.za','','','');
 
         if ($this->conn->connect_error)
         {
